@@ -1,0 +1,93 @@
+<html>
+    <title>Windows Presentation Foundation - Lab 16</title>
+</html>
+<body>
+    <h2>Mini Paint</h2>
+    <h4>Lab Part</h4>
+    <ul>
+        <li><a href="WPF16 - Lab.exe">Example application</a></li>
+        <li>
+            Task description:
+            <ul>
+                <li>
+                    Main window <strong>(2.0p)</strong>
+                    <ul>
+                        <li>On the window title bar there is an <a href="Paint.ico">icon</a> and title <strong>Mini Paint</strong></li>
+                        <li>When the application starts the window is in the maximized state, filling an entire screen</li>
+                        <li>Min size of the window is set to <strong>950x250</strong> px</li>
+                        <li>Font size is set to 16</li>
+                    </ul>
+                </li>
+                <li>
+                    Layout <strong>(2.0p)</strong>
+                    <ul>
+                        <li>The window is split into two parts</li>
+                        <li>Top part has 4 buttons, 2 on the left (<strong>Rectangle</strong> and <strong>Ellipse</strong>) and 2 on the right (<strong>Delete</strong> and <strong>Random colors</strong>)</li>
+                        <li>Top part background is <strong>LightGray</strong></li>
+                        <li>The text on the buttons is wrapped to a new line if it does not fit in the button</li>
+                        <li>Lower part is filled with the <strong>Canvas</strong> control</li>
+                        <li>Canvas is filled with linear gradient from lower left corner of the application, to the upper right corner</li>
+                        <li>The gradient goes from the <strong>Black</strong> color, through the <strong>DarkSlateGray</strong> in the middle, to the <strong>Black</strong> color again</li>
+                        <li>The layout is preserved when the window is resized</li>
+                    </ul>
+                </li>
+                <li>
+                    Displaying shapes <strong>(2.0p)</strong>
+                    <ul>
+                        <li>When the application starts there are 4 random shapes displayed on the canvas (Rectangles and Ellipses)</li>
+                        <li>Positions, colors and sizes are randomized each time the application starts</li>
+                        <li>Shapes are not drawn outside of the canvas (they are clipped to a canvas area)</li>
+                        <li>Shapes are uniformly filled with color and have no outlines</li>
+                    </ul>
+                </li>
+                <li>
+                    Selecting shapes <strong>(2.0p)</strong>
+                    <ul>
+                        <li>When the mouse hover over a shape the cursor changes to a <strong>Hand</strong></li>
+                        <li>Shapes can be selected and deselected by clicking on them with the right mouse button</li>
+                        <li>When a shape is selected it is displayed in front of all the unselected shapes</li>
+                        <li>Selected shape has a <strong>White</strong> glow effect with the radius of <strong>50 pixels</strong> and direction of <strong>270 degrees</strong></li>
+                    </ul>
+                </li>
+                <li>
+                    Changing Shapes <strong>(1.0p)</strong>
+                    <ul>
+                        <li>When the <strong>Delete</strong> button is pressed, all the selected shapes are removed from the canvas</li>
+                        <li>When the <strong>Random colors</strong> button is pressed, colors of all the selected shapes are changed to new randomly generated colors</li>
+                    </ul>
+                </li>
+                <li>
+                    Adding shapes <strong>(3.0p)</strong>
+                    <ul>
+                        <li>New shapes can be added by clicking either <strong>Rectangle</strong> button or <strong>Ellipse</strong> button</li>
+                        <li>When one of those buttons is pressed, the cursor over the canvas changes to a <strong>Cross</strong></li>
+                        <li>New shapes can be drawn by pressing and holding the left mouse button on the canvas and moving the mouse</li>
+                        <li>During drawing the mouse can be moved anywhere, also outside of the application window, and the shape continues to follow the mouse cursor</li>
+                        <li>When the left mouse button is released, the shape is finished and the cursor changes back to the default one</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            Remarks:
+            <ul>
+                <li>It is not possible to obtain points for incomplete functionality</li>
+                <li>In all doubtful and untold aspects application should behave like an example app</li>
+            </ul>
+        </li>
+
+        <li>
+            Tips:
+            <ul>
+                <li>Canvas</li>
+                <li>Rectangle, Ellipse</li>
+                <li>Canvas.Children, Canvas.ClipToBounds</li>
+                <li>Canvas.SetLeft, Canvas.SetTop, Canvas.SetZIndex</li>
+                <li>Mouse.Capture</li>
+				<li>LinearGradientBrush, GradientStop</li>
+                <li>DropShadowEffect</li>
+            </ul>
+        </li>
+    </ul>
+</body>

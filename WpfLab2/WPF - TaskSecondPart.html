@@ -1,0 +1,121 @@
+<html>
+    <title>Windows Presentation Foundation - Lab 16</title>
+</html>
+<body>
+    <h2>Mini Paint</h2>
+    <h4>Home Part</h4>
+    <ul>
+        <li><a href="WPF16 - Home.exe">Example application</a></li>
+        <li>
+            Task description:
+            <ul>
+                <li>
+                    Top bar layout <strong>(1.0p)</strong>
+                    <ul>
+                        <li>There are 2 additional buttons to the right of the application</li>
+                        <li>New buttons are separated by a black vertical line</li>
+                        <li>There are 4 additional controls with the shape properties</li>
+                        <li>There are 2 black vertical lines separating left and right sets of controls from the center</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    Changing language <strong>(1.5p)</strong>
+                    <ul>
+                        <li>On the right side of the top panel there is a button with an image of a flag</li>
+                        <li>Clicking on the button changes the language from English to some other language (you can choose any other language)</li>
+                        <li>Flag image changes to match currently selected language</li>
+                        <li><strong>All the strings and image references for given language are held in the corresponding resx files</strong></li>
+                        <li>All the text in the application changes without application reloading</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    Exporting image <strong>(1.5p)</strong>
+                    <ul>
+                        <li>To the left of the button to change language there is a button that allows to export current canvas to an image file</li>
+                        <li>After pressing the button there is a dialog window displayed that allows to choose a name and location of a result image file</li>
+                        <li>The filter shows only .png files</li>
+                        <li>After pressing <strong>Save</strong> button the canvas with all the shapes is saved to the .png file</li>
+                        <li>The result file looks exactly like the canvas in the application</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    Shape properties <strong>(2.0p)</strong>
+                    <ul>
+                        <li>On the left side of the top panel, to the right of existing buttons there are 4 new controls stacked on top of each other. They are used to modify shape width, height, fill color and rotation angle</li>
+                        <li>Each field has a label on its left</li>
+                        <li>Labels are aligned to the right</li>
+        
+                        <li>Width and height fields accept only positive integer values and the values are applied immediately to a shape</li>
+                        <li>Color can be selected from the list of all the colors found in <strong>System.Windows.Media.Colors</strong>, except for <strong>Transparent</strong></li>
+                        
+                        <li>Angle label ends with currently selected angle integer value</li>
+                        <li>Angle can be changed with a slider with the values between <strong>-180</strong> and <strong>180</strong> degrees</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    Color selection <strong>(2.0p)</strong>
+                    <ul>
+                        <li>Each entry on the list of colors has a background of the corresponding color</li>
+                        <li>Each entry fills all the horizontal space</li>
+                        <li>The name of a color is horizontally centered</li>
+                        <li>The names are correctly formattet, i.e. each word starting with uppercase letter is separated with a space</li>
+                        <li>A foreground color of a color name text is contrasting with the background color e.g. if the color is bright then the text color is black, and if the color is dark then the text color is white. Brightness of a color can calculated in any way</li>
+                        <li>Selected color looks the same as on the list of colors</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    Selecting shapes <strong>(2.0p)</strong>
+                    <ul>
+                        <li>When the left mouse button is pressed on an unselected shape it is selected and all the other shapes are deselected</li>
+                        <li>When pressed anywhere on a canvas outside of any shape all the selected shapes are deselected</li>
+        
+                        <li>Shape properties display correct properties of the last selected shape and update when changing selection</li>
+                        <li>Shape properties affect the last selected shape. When that shape is deselected, then properties affect the previous shape in the order of shape selection</li>
+                        <li>When no shape is selected, then the shape properties along with the <strong>Delete</strong> and <strong>Random colors</strong> buttons are disabled, and the properties are empty</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    Moving shapes <strong>(1.5p)</strong>
+                    <ul>
+                        <li>When pressing and holding the left mouse button on any selected shape all of them are moving with the mouse cursor</li>
+                        <li>Shapes keep the same position relative to a cursor</li>
+                        <li>When moving the shapes the cursor changes to a <strong>ScrollAll</strong></li>
+                        <li>Shapes can be moved outside of the canvas</li>
+                    </ul>
+                </li>
+        
+                <li>
+                    Rotating shapes <strong>(0.5p)</strong>
+                    <ul>
+                        <li>When moving the angle slider the selected shape is rotated by the selected angle</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            Remarks:
+            <ul>
+                <li><strong>Use Styles to limit XAML code duplication</strong></li>
+                <li>It is not possible to obtain points for incomplete functionality</li>
+                <li>In all doubtful and untold aspects application should behave like an example app</li>
+            </ul>
+        </li>
+
+        <li>
+            Tips:
+            <ul>
+                <li>CultureInfo.DefaultThreadCurrentUICulture, ResourceManager</li>
+                <li>RenderTargetBitmap, PngBitmapEncoder, SaveFileDialog</li>
+                <li>INotifyPropertyChanged, UpdateSourceTrigger</li>
+                <li>ItemTemplate, DataTemplate, ItemContainerStyle, HorizontalContentAlignment</li>
+            </ul>
+        </li>        
+    </ul>
+</body>

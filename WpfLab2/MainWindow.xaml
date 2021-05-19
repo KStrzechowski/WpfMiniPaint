@@ -40,24 +40,16 @@
             <TextBlock Text="Random Colors" TextWrapping="Wrap"/>
         </Button>
         
-        <Canvas Name="Canvas1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                ClipToBounds="True">
+        <Canvas x:Name="mainCanvas" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                ClipToBounds="True" Loaded="mainCanvas_Loaded" >
             <Canvas.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
                     <GradientStop Color="Black" Offset="0.0" />
                     <GradientStop Color="DarkSlateGray" Offset="0.5" />
                     <GradientStop Color="Black" Offset="1" />
                 </LinearGradientBrush>
+                
             </Canvas.Background>
-
-            <Rectangle Name="Rectangle1" Visibility="Visible" Fill="Yellow" Cursor="Hand" 
-                       MouseDown="Rectangle1_MouseDown" LostMouseCapture="Rectangle1_MouseUp"/>
-            <Rectangle Name="Rectangle2" Visibility="Visible" Fill="Red" Cursor="Hand" 
-                       MouseDown="Rectangle2_MouseDown"  LostMouseCapture="Rectangle2_MouseUp"/>
-            <Ellipse Name="Ellipse1" Visibility="Visible" Fill="Green" Cursor="Hand" MouseDown="Ellipse1_MouseDown"
-                      LostMouseCapture="Ellipse1_MouseUp"/>
-            <Ellipse Name="Ellipse2" Visibility="Visible" Fill="Blue" Cursor="Hand" MouseDown="Ellipse2_MouseDown"
-                      LostMouseCapture="Ellipse2_MouseUp"/>
         </Canvas>
     </Grid>
 </Window>

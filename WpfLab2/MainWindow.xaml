@@ -23,32 +23,32 @@
         </Grid.ColumnDefinitions>
         <StackPanel Background="LightGray" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch">
         </StackPanel>
-        <Button  Grid.Row="0" Grid.Column="0" x:Name="Rectangle" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                 Margin="10,10,10,10">
+        <Button  Grid.Row="0" Grid.Column="0" x:Name="rectangleButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                 Margin="10,10,10,10" Click="Rectangle_Click">
             <TextBlock Text="Rectangle" TextWrapping="Wrap"/>
         </Button>
-        <Button  Grid.Row="0" Grid.Column="1" x:Name="Ellipse" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                 Margin="10,10,10,10">
+        <Button  Grid.Row="0" Grid.Column="1" x:Name="ellipseButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                 Margin="10,10,10,10" Click="Ellipse_Click">
             <TextBlock Text="Ellipse" TextWrapping="Wrap"/>
         </Button>
-        <Button  Grid.Row="0" Grid.Column="3" x:Name="Delete" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                 Margin="10,10,10,10">
+        <Button  Grid.Row="0" Grid.Column="3" x:Name="deleteButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                 Margin="10,10,10,10" Click="Delete_Click">
             <TextBlock Text="Delete" TextWrapping="Wrap"/>
         </Button>
-        <Button  Grid.Row="0" Grid.Column="4" x:Name="RandomColors" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                 Margin="10,10,10,10">
+        <Button  Grid.Row="0" Grid.Column="4" x:Name="randomColorsButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                 Margin="10,10,10,10" Click="Random_Click">
             <TextBlock Text="Random Colors" TextWrapping="Wrap"/>
         </Button>
-        
-        <Canvas x:Name="mainCanvas" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                ClipToBounds="True" Loaded="mainCanvas_Loaded" >
+
+        <Canvas x:Name="mainCanvas" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" ClipToBounds="True" 
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="mainCanvas_Loaded"
+                MouseLeftButtonDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseLeftButtonUp="Canvas_MouseUp">
             <Canvas.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
                     <GradientStop Color="Black" Offset="0.0" />
                     <GradientStop Color="DarkSlateGray" Offset="0.5" />
                     <GradientStop Color="Black" Offset="1" />
                 </LinearGradientBrush>
-                
             </Canvas.Background>
         </Canvas>
     </Grid>
